@@ -12,7 +12,7 @@
         {
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2021-09-01",
-            "name": "[parameters('storageAccounts_storageaccountajaya1_name')]",
+            "name": "[parameters('storageAccounts_storageaccountajaya_name')]",
             "location": "eastus",
             "sku": {
                 "name": "Standard_LRS",
@@ -52,9 +52,9 @@
         {
             "type": "Microsoft.Storage/storageAccounts/blobServices",
             "apiVersion": "2021-09-01",
-            "name": "[concat(parameters('storageAccounts_storageaccountajaya1_name'), '/default')]",
+            "name": "[concat(parameters('storageAccounts_storageaccountajaya_name'), '/default')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_storageaccountajaya1_name'))]"
+                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_storageaccountajaya_name'))]"
             ],
             "sku": {
                 "name": "Standard_LRS",
@@ -86,9 +86,9 @@
         {
             "type": "Microsoft.Storage/storageAccounts/queueServices",
             "apiVersion": "2021-09-01",
-            "name": "[concat(parameters('storageAccounts_storageaccountajaya1_name'), '/default')]",
+            "name": "[concat(parameters('storageAccounts_storageaccountajaya_name'), '/default')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_storageaccountajaya1_name'))]"
+                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_storageaccountajaya_name'))]"
             ],
             "properties": {
                 "cors": {
@@ -99,9 +99,9 @@
         {
             "type": "Microsoft.Storage/storageAccounts/tableServices",
             "apiVersion": "2021-09-01",
-            "name": "[concat(parameters('storageAccounts_storageaccountajaya1_name'), '/default')]",
+            "name": "[concat(parameters('storageAccounts_storageaccountajaya_name'), '/default')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_storageaccountajaya1_name'))]"
+                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_storageaccountajaya_name'))]"
             ],
             "properties": {
                 "cors": {
@@ -112,10 +112,10 @@
         {
             "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
             "apiVersion": "2021-09-01",
-            "name": "[concat(parameters('storageAccounts_storageaccountajaya1_name'), '/default/containerajay')]",
+            "name": "[concat(parameters('storageAccounts_storageaccountajaya_name'), '/default/containerajay')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_storageaccountajaya1_name'), 'default')]",
-                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_storageaccountajaya1_name'))]"
+                "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('storageAccounts_storageaccountajaya_name'), 'default')]",
+                "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccounts_storageaccountajaya_name'))]"
             ],
             "properties": {
                 "immutableStorageWithVersioning": {
